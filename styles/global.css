@@ -1,0 +1,41 @@
+html{
+    font-family: 'Lucida Sans-Serif';
+    font-stretch: 50%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header{
+    font-weight: 500 !important;
+}
+
+.top-right{
+    float: left;
+}
+
+.rate-link{
+    color: rgb(206, 177, 15);
+}
+.rate-link > b{
+    color: black;
+}
+
+.rate-grid{
+    text-align: center;
+}
+
+.rate-grid:hover{
+    background-color: rgb(240, 240, 240);
+    /* opacity: 60%; */
+}
+
+p{
+    color: rgb(97, 95, 95);
+}
+
+.news-heading:hover{
+    color: rgb(10, 10, 192);
+}
