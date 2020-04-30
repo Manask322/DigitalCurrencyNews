@@ -7,8 +7,8 @@
       "CLOUDINARY_URL": "cloudinary://335124551766846:7jYUbdoVVw1hGcI2tCunszGkxhQ@dp7gfnenp",
       "DB_NAME": "dcn",
       "SENDGRID_API_KEY": "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",
-      "EMAIL_FROM": "manask322@nextjs-mongodb.now.sh",
-      "WEB_URI": "https://nextjs-mongodb.now.sh",
+      "EMAIL_FROM": "manask322@dcn.now.sh",
+      "WEB_URI": "https://dcn.now.sh/",
       "USING_SECRETS": "Consider using Zeit Now Secrets instead."
     }
   }

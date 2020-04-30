@@ -122,7 +122,7 @@ const IndexPage = (props) => {
 };
 
 IndexPage.getInitialProps = async () => {
-  const res = await fetch('http://localhost:3000/api/article')
+  const res = await fetch( process.env.WEB_URI + '/api/article')
   const json = await res.json()
   return { articles: json }
 }
