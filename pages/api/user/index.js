@@ -7,7 +7,7 @@ import { extractUser } from '../../../lib/api-helpers';
 const upload = multer({ dest: '/tmp' });
 const handler = nextConnect();
 
-/* eslint-disable camelcase */
+/* eslint-disable camelcase*/
 const {
   hostname: cloud_name,
   username: api_key,
@@ -25,6 +25,7 @@ handler.use(middleware);
 handler.get(async (req, res) => res.json({ user: extractUser(req) }));
 
 handler.patch(upload.single('profilePicture'), async (req, res) => {
+  console.log(req.file)
   if (!req.user) {
     req.status(401).end();
     return;

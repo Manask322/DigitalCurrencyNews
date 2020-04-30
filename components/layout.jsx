@@ -10,16 +10,6 @@ import Typography from '@material-ui/core/Typography';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
-import Divider from '@material-ui/core/Divider'
-import AppBar from '@material-ui/core/AppBar';
-import Drawer from '@material-ui/core/Drawer';
-import MenuItem from '@material-ui/core/MenuItem';
-import IconButton from '@material-ui/core/IconButton';
-import Paper from '@material-ui/core/Paper';
-import Menu from '@material-ui/core/Menu';
-import MenuIcon from '@material-ui/icons/Menu';
-import Toolbar from '@material-ui/core/Toolbar'
-import { ListItem } from '@material-ui/core';
 import ArrowDownwardSharpIcon from '@material-ui/icons/ArrowDownwardSharp';
 
 
@@ -49,16 +39,16 @@ export default ({ children }) => {
         />
         <meta
           name="description"
-          content="nextjs-mongodb-app is a continously developed app built with Next.JS and MongoDB. This project goes further and attempts to integrate top features as seen in real-life apps."
+          content="World class news platform for Crypto News"
         />
-        <meta property="og:title" content="Next.js + MongoDB App" />
+        <meta property="og:title" content="Digital Currency News" />
         <meta
           property="og:description"
-          content="nextjs-mongodb-app is a continously developed app built with Next.JS and MongoDB. This project goes further and attempts to integrate top features as seen in real-life apps."
+          content="World class news platform for Crypto News"
         />
         <meta
           property="og:image"
-          content="https://repository-images.githubusercontent.com/201392697/5d392300-eef3-11e9-8e20-53310193fbfd"
+          content="https://raw.githubusercontent.com/Manask322/dcn/master/Free_Sample_By_Wix.jpg?token=AHW2P5Y546TH4ITK2YGYDJK6WRJAE"
         />
       </Head>
       <header>
@@ -112,8 +102,12 @@ export default ({ children }) => {
                   ) : (
                     <Grid container justify="flex-end">
                       <Typography >
+                        <Link href="/article/add">
+                          <a>Add Article </a>
+                        </Link>
+                        |
                         <Link href="/profile">
-                          <a>Profile  </a>
+                          <a> Profile  </a>
                         </Link>
                         | 
                         <a tabIndex={0} role="button" onClick={handleLogout}> Logout </a>
