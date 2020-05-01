@@ -11,7 +11,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
 import ArrowDownwardSharpIcon from '@material-ui/icons/ArrowDownwardSharp';
-
+import NProgress from 'nprogress'
 
 export default ({ children }) => {
   const [user, { mutate }] = useUser();

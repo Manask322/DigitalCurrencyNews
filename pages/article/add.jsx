@@ -67,38 +67,34 @@ const FormLayout = (props) => {
             <h1>Add new Article </h1>
             <form  onSubmit={handleSubmit}>
                 {errorMsg ? <p style={{ color: 'red' }}>{errorMsg}</p> : null}
-                <FormGroup style={{padding:"1%"}}>
-                    <TextField id="news_type" label="News Type" variant="outlined" name="news_type" color="primary"/>
-                </FormGroup>
-                <FormGroup style={{padding:"1%"}} >
-                    <TextField id="heading" className="heading" label="Heading" name="heading" variant="outlined" color="primary"/>
-                </FormGroup>
-                <FormGroup style={{padding:"1%"}}>
-                    <TextField id="sub-heading" label="SubHeading" name="subheading" variant="outlined" color="primary"/>
-                </FormGroup>
-                <FormGroup style={{padding:"1%"}}>
-                    <TextField id="Author" label="Author" variant="outlined" name="author" color="primary"/>
-                </FormGroup>
-                <FormGroup style={{padding:"1%"}}>
-                    <TextField id="Main-Content" label="Content" name="content" multiline rows={10} variant="outlined" color="primary"/>
-                </FormGroup>
+
+                <div style={{padding:"1%"}}>
+                    <TextField id="news_type" style={{marginRight:"7%"}} label="News Type" variant="outlined" name="news_type" color="primary"/>
+                    <TextField id="date" label="Date" variant="outlined" name="date" InputLabelProps={{shrink: true,}} type="date" ></TextField>
+                </div>
+                <div style={{width:"70%",marginRight:"15%",marginLeft:"15%"}}>
+                    <FormGroup style={{padding:"1%"}} >
+                        <TextField id="heading" className="heading" label="Heading" name="heading" variant="outlined" color="primary"/>
+                    </FormGroup>
+                    <FormGroup style={{padding:"1%"}}>
+                        <TextField id="sub-heading" label="SubHeading" name="subheading" variant="outlined" color="primary"/>
+                    </FormGroup>
+                    <FormGroup style={{padding:"1%"}}>
+                        <TextField id="Author" label="Author" variant="outlined" name="author" color="primary"/>
+                    </FormGroup>
+                    <FormGroup style={{padding:"1%"}}>
+                        <TextField id="Main-Content" label="Content" name="content" multiline rows={10} variant="outlined" color="primary"/>
+                    </FormGroup>
+                </div>
                 <FormGroup>
-                    <input
-                        accept="image/*"
-                        className="image"
-                        id="contained-button-file"
-                        multiple
-                        type="file"
-                        style={{display:"none"}}
-                        name="images"
-                        ref={profilePictureRef}
-                    />
                     <label htmlFor="contained-button-file">
-                        <Button variant="contained" color="primary" component="span">
-                        Upload
+                        <Button variant="contained" color="secondary" component="span">
+                            Upload Image
                         </Button>
+                    <input accept="image/*" className="image" id="contained-button-file" type="file" name="images" ref={profilePictureRef}/>
                     </label>
                 </FormGroup>
+                <br/>
                 <Button variant="outlined" type="submit" color="default">
                       Submit
                 </Button>
