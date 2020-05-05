@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { useUser } from '../../lib/hooks';
+import { Paper, Container } from '@material-ui/core';
 
 const ProfileSection = () => {
   const [user, { mutate }] = useUser();
@@ -69,65 +70,89 @@ const ProfileSection = () => {
         <title>Settings</title>
       </Head>
       <section>
-        <h2>Edit Profile</h2>
-        {msg.message ? <p style={{ color: msg.isError ? 'red' : '#0070f3', textAlign: 'center' }}>{msg.message}</p> : null}
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="name">
-            Name
-            <input
-              required
-              id="name"
-              name="name"
-              type="text"
-              placeholder="Your name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-          </label>
-          <label htmlFor="bio">
-            Bio
-            <textarea
-              id="bio"
-              name="bio"
-              type="text"
-              placeholder="Bio"
-              value={bio}
-              onChange={(e) => setBio(e.target.value)}
-            />
-          </label>
-          <label htmlFor="avatar">
-            Profile picture
-            <input
-              type="file"
-              id="avatar"
-              name="avatar"
-              accept="image/png, image/jpeg"
-              ref={profilePictureRef}
-            />
-          </label>
-          <button disabled={isUpdating} type="submit">Save</button>
-        </form>
-        <form onSubmit={handleSubmitPasswordChange}>
-          <label htmlFor="oldpassword">
-            Old Password
-            <input
-              type="password"
-              name="oldPassword"
-              id="oldpassword"
-              required
-            />
-          </label>
-          <label htmlFor="newpassword">
-            New Password
-            <input
-              type="password"
-              name="newPassword"
-              id="newpassword"
-              required
-            />
-          </label>
-          <button type="submit">Change Password</button>
-        </form>
+        <Container maxWidth="sm">
+          <h2>Edit Profile</h2>
+          {msg.message ? <p style={{ color: msg.isError ? 'red' : '#0070f3', textAlign: 'center' }}>{msg.message}</p> : null}
+            <Paper elevation={20}>
+            <form onSubmit={handleSubmit} style={{padding:"2%"}}>
+
+              <div style={{textAlign:"center"}}>
+                <div style={{paddingBottom:"2%"}}>
+                    <label htmlFor="name">
+                      Name :-
+                      <input
+                        required
+                        id="name"
+                        name="name"
+                        type="text"
+                        placeholder="Your name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                      />
+                    </label>
+                </div>
+                <div style={{paddingBottom:"2%"}}>
+                      <label htmlFor="bio">
+                        Bio :-
+                        <textarea
+                          id="bio"
+                          name="bio"
+                          type="text"
+                          placeholder="Bio"
+                          value={bio}
+                          onChange={(e) => setBio(e.target.value)}
+                        />
+                    </label>
+                </div>
+                <div style={{paddingBottom:"2%"}}>
+                    <label htmlFor="avatar">
+                      Profile picture :-
+                      <input
+                        type="file"
+                        id="avatar"
+                        name="avatar"
+                        accept="image/png, image/jpeg"
+                        ref={profilePictureRef}
+                      />
+                    </label>
+                </div>
+                <div>
+                  <button disabled={isUpdating} type="submit">Save</button>
+                </div>
+              </div>
+            </form>
+            </Paper>
+            <br/>
+            <Paper elevation={20} style={{textAlign:"center"}}>
+                <form onSubmit={handleSubmitPasswordChange} style={{padding:"2%"}}>
+                  <div style={{paddingBottom:"2%"}}>
+                      <label htmlFor="oldpassword">
+                      Old Password :-
+                      <input
+                        type="password"
+                        name="oldPassword"
+                        id="oldpassword"
+                        required
+                      />
+                    </label>
+                  </div>
+                  <div style={{paddingBottom:"2%"}}>
+                    <label htmlFor="newpassword">
+                    New Password :-
+                    <input
+                      type="password"
+                      name="newPassword"
+                      id="newpassword"
+                      required
+                    />
+                  </label>
+                  </div>
+                  <div style={{paddingBottom:"2%"}}>
+                    <button type="submit">Change Password</button>
+                  </div>
+              </form>
+            </Paper>
+        </Container>
       </section>
     </>
   );

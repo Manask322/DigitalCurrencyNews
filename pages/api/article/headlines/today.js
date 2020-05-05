@@ -1,5 +1,5 @@
 import nextConnect from 'next-connect';
-import middleware from '../../../middlewares/middleware';
+import middleware from '../../../../middlewares/middleware';
 
 const handler = nextConnect();
 
@@ -20,7 +20,7 @@ function makeDate(){
 }
 
 handler.get(async (req, res) => {
-    let doc = await req.db.collection('posts').find({date:makeDate()}).toArray()
+    let doc = await req.db.collection('posts').find({date:makeDate(),news_type:"headlines"}).toArray()
     res.json(doc);
 });
 

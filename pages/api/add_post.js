@@ -9,13 +9,12 @@ const handler = nextConnect();
 handler.use(middleware);
 
 handler.post( async (req, res) => {
-  const { news_type, heading, subheading, author, content, image } = req.body;
+  const { news_type, date ,heading, subheading, author, content,content_1,content_2, image } = req.body;
   
   const article = await req.db
     .collection('posts')
-    .insertOne({ news_type, heading, subheading, author, content, image })
+    .insertOne({ news_type, date, heading, subheading, author, content,content_1,content_2,image })
     .then(({ ops }) => ops[0]);
-    console.log(article)
     res.status(201).json({
         msg: "Article Added"
     });

@@ -22,11 +22,11 @@ export default ({ children }) => {
     mutate(null);
   };
   const months = ['Jan','Feb','March','Apr','May','June','July','Aug','Sep','Oct','Nov','Dec']
-  const weekdays = ['Monday','Tuesday','Wednesday','Thrusday','Friday','Saturday','Sunday']
+  const weekdays = ['Sunday','Monday','Tuesday','Wednesday','Thrusday','Friday','Saturday']
   const today_date = new Date()
   const day = weekdays[today_date.getDay()]
   const date = today_date.getDate()
-  const month = months[today_date.getMonth() - 1]
+  const month = months[today_date.getMonth()]
   const year = today_date.getFullYear() 
   return (
     <>
@@ -64,7 +64,7 @@ export default ({ children }) => {
             <Grid item xs={9} sm={9} >
                   <div style={{fontSize:  "350%"}}>
                       <Link href="/">
-                        <a style={{color:"black",letterSpacing:"-1.7px",fontWeight:"550"}}>
+                        <a style={{color:"black",letterSpacing:"-1.7px",fontWeight:"550",fontFamily:"Roboto Bold"}}>
                           Digital Currency News
                         </a>
                       </Link>
@@ -106,11 +106,11 @@ export default ({ children }) => {
                           <a>Add Article </a>
                         </Link>
                         |
+                        <a onClick={handleLogout} style={{cursor:"pointer"}}> Logout </a>
+                        | 
                         <Link href="/profile">
                           <a> Profile  </a>
                         </Link>
-                        | 
-                        <a tabIndex={0} role="button" onClick={handleLogout}> Logout </a>
                       </Typography >
                     </Grid>
                   )}

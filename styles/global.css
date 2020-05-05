@@ -1,5 +1,5 @@
 html{
-    font-family: 'Lucida Sans-Serif';
+    font-family: "Roboto", 'Lucida Sans-Serif';
     font-stretch: 50%;
 }
 
@@ -38,4 +38,9 @@ p{
 
 .news-heading:hover{
     color: rgb(10, 10, 192);
+}
+
+.article-heading{
+    font-size: xx-large;
+
 }

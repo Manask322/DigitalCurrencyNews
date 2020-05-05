@@ -20,7 +20,7 @@ function makeDate(){
 }
 
 handler.get(async (req, res) => {
-    let doc = await req.db.collection('posts').find({date:makeDate()}).toArray()
+    let doc = await req.db.collection('posts').find({news_type:"blog"}).toArray()
     res.json(doc);
 });
 
