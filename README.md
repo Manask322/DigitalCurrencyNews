@@ -1,21 +1,3 @@
-[![Next.js](https://assets.zeit.co/image/upload/v1538361091/repositories/next-js/next-js.png)](https://nextjs.org)
-
-<h1 align="center">Next.js ❤️ MongoDB</h1>
-
-<div align="center">
-  
-[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/hoangvvo/nextjs-mongodb-app)
-
-A full-fledged app made with [**Next.js**](https://github.com/zeit/next.js/) and [**MongoDB**](https://www.mongodb.com/)
-
-:rocket: [Check out the demo](https://nextjs-mongodb.now.sh/)
-
-</div>
-
-<h2 align="center">Features</h2>
-
-<p align="center">:heavy_check_mark: No Express.js :heavy_check_mark: Serverless ready :heavy_check_mark: API Routes :heavy_check_mark: Middleware</p>
-
 <h3 align="center">:lock: Authentication</h3>
 
 <div align="center">
@@ -95,34 +77,12 @@ Required environmental variables in this project include:
 - `process.env.DB_NAME` The name of the MongoDB database to be used.
 - `process.env.WEB_URI` The *URL* of your web.
 - `process.env.CLOUDINARY_URL` (optional, Cloudinary **only**) Cloudinary environment variable for configuration. See [this](https://cloudinary.com/documentation/node_integration#configuration).
-- `process.env.SENDGRID_API_KEY` (optional, SendGrid **only**) SendGrid API Key. See [this](https://sendgrid.com/docs/ui/account-and-settings/api-keys/).
 
 <h3 align="center">Development</h3>
 
 Start the development server by running `yarn dev` or `npm run dev`. The project supports using `.env`. Getting started by create a `.env` file with the above variables.
 
-**Styles (CSS):** This project does not contain any stylesheets, and no component has classes. To remove the style, simply remove all `<style jsx>` and `<style jsx global>` tags.
-
 #### `.env`
 
-I include my own MongoDB, Cloudinary, SendGrid environment variables in [.env.example](.env.example) for experimentation purposes. Please replace them with your owns and refrain from sabotaging them. You can try them in development by renaming it into `.env`.
+MongoDB, Cloudinary,  environment variables in [.env]
 
-In production, it is recommended to set the environment variables using the options provided by your cloud/hosting providers. **Do not use or commit `.env`**.
-
-<h2 align="center">Contributing</h2>
-
-<div align="center">
-  
-Please see my [contributing.md](CONTRIBUTING.md).
-
-</div>
-
-<h2 align="center">
-  License
-</h2>
-
-<div align="center">
-  
-  [MIT](LICENSE)
-  
-</div>
