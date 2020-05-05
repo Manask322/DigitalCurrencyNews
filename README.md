@@ -1,3 +1,6 @@
+<h3 align="center">Install Dependencies</h3>
+
+run `npm install` to install the dependencies. 
 
 <h3 align="center">Development</h3>
 
