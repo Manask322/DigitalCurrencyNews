@@ -221,7 +221,7 @@ IndexPage.getInitialProps = async () => {
     }
   }
 
-  const old_headlines_res = await fetch(  "http://localhost:3000" + '/api/article/headlines/all')
+  const old_headlines_res = await fetch(  process.env.WEB_URI + '/api/article/headlines/all')
   var json = await old_headlines_res.json()
   const old_headlines_count = Object.keys(json).length;
   var old_headlines = null
